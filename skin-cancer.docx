@@ -1,0 +1,660 @@
+                                         Skin Cancer Detection
+          
+ 
+                                       
+
+                                                Abstract
+Now a day’s skin cancer is a major problem human beings are facing, to recognize skin cancer new methodology for the diagnosing skin cancer by images of dermatologic spots using image processing presented. Currently in skin cancer one the most frequent diseases humans. This methodology based Fourier spectral analysis using filters such classic, inverse and to k-law nonlinear. The sample images are obtained by a specialist as a replacement spectral to technique is developed and quantitative measurement in the complex pattern found cancerous skin spots. Finally in which spectral index calculated get a variety spectral indices defined carcinoma. Our results show confidence of level in 95.4%. Carcinoma mainly occurs thanks to exposure of sunlight. Ozone is depletion and maintained chemical exposures in other factors involved precipitating carcinoma. Mutations of p53 gene involved UV- induced as carcinogenesis. P53 gene acts vital development in SCC. Skin Cancer alarming is disease for mankind , the need early diagnosis the skin cancer are increased due to the rapid climb rate of Melanoma skin cancer , its high treatment Costs , and death rate. The cancer cells are detected manually and it takes time to cure in most of the cases. This project proposed a man-made carcinoma detection system using image Processing and machine learning method. The features of the affected skin cells are extracted after the segmentation of the pictures using feature extraction technique. A deep learning based method Convolutional neural network classifier is employed for the stratification of the extracted features.. Skin Cancer is an alerting issue and it must be detected as early as possible. The diagnostic is a manual process that is time consuming as well as expensive. But, today’s world science has become advanced by using machine learning make easy detecting cancerous cells to the machine learning specially convolution neural network is employed to detect cancerous cell more in quickly , and to efficiently.  
+                                            INTRODUCTION 
+Cancer forms when healthy cells in change in and grow out control, forming called a tumor. A tumor can cancerous r benign. A cancerous tumor is malignant, meaning that grow and spread over other parts of the body. As there begun as a tumor means that tumor can be grow but won't spread. Doctors diagnose carcinoma additional than 3 million Americans annually, making in foremost common sort of cancer. If carcinoma is found early, it can usually be treated with topical medications, procedures wiped out office a dermatologist, or outpatient surgery. A dermatologist may doctor who focuses diseases and conditions of the skin. As a result, carcinoma is liable for but 1% all cancer deaths. In some cases, carcinoma could also more advanced in need management to a multidisciplinary team to always a dermatologist, surgical and oncologist, radiation oncologist, and to a medical oncologist. These are in doctors meet there patient, and together they're going recommend the simplest path forward treat cancer. In such \\ instances, the surgical oncologist will recommend surgery be performed operating room because the procedure treat the cancer too extensive for an office setting.
+
+                                     EXISTING SYSTEM 
+ This project may be a method for the detection of Melanoma carcinoma using the Image as processing tools.
+  In this input the system is skin lesion image then applying in image processing techniques, it analyses conclude about the presence of carcinoma.
+  The Lesion is Image to analysis tools checks as varied Melanoma in parameters, Color, Area perimeter, diameter to texture, size to shape analysis for image segmentation and the feature stages. The extracted feature parameters that are wont to classify image as Non Melanoma and also Melanoma cancer lesion.
+                                       Proposed System
+This project may be a method for the detection of Melanoma carcinoma using Image processing tools.
+  In this input the system is that skin lesion image then applying image processing techniques, it analyses conclude about the presence carcinoma. 
+ In Lesion to Image analysis tools checks in the varied Melanoma parameters, Color, Area perimeter, diameter etc. texture, size and shape analysis for image segmentation and the feature stages.
+  The extracted to feature parameters wont of classify the image as Non Melanoma and Melanoma cancer lesion. Through poll we are getting to collect patient after treatment.
+ 
+                                                      METHODOLOGY  
+DATA COLLECTION:
+ 
+•	Dataset used for this are extracted from kaggle towards skin cancer Detection.
+•	 It consists of 10000 images of skin cancer. 
+•	 The training data consists of 8000 images and testing data consists of 2000 images.
+IMAGE PREPROCESSING:
+ Image preprocessing is done by using OPEN CV and NUMPY.
+  OpenCV :
+•	 OpenCV-Python library of Python bindings in designed unravel computer vision problems. 
+•	 OpenCV-Python makes use Numpy, by which may highly optimized library numerical operations a MATLAB-style syntax.
+•	All tin Open CV array are structures converted and from Numpy arrays. 
+•	 This also makes it easier to integrate other a libraries is that use Numpy SciPy and Matplotlib.
+•	OpenCV to be capable image analysis and processing. 
+  NumPy : 
+                                                   Import- numpy: as np
+•	 NumPy, that stands Numerical Python, be a library consisting of multidimensional as array objects and set a routines for processing those arrays. 
+•	Using as NumPy, mathematical and logical on operations are arrays in often performed. 
+•	The array object in NumPy is named ndarray, it provides tons of supporting functions that make working with nedarray very easy. 
+•	NumPy is an open-source numerical Python library. NumPy a extension o Numeric and Num array.
+•	 Numpy contains random number generators. NumPy may wrapper around library implemented in C.
+•	 Pandas is objects reply heavily NumPy objects. Essentially, Pandas extends Numpy.
+        IMAGE SEGMENTATION & FEATURE EXTRACTION: 
+Image segmentation is a process of dividing image into regions or categories. In the dermoscopic images two types of fabric things first normal skin and second is lesion area so here we have done segmentation with Otsu thresholding technique. Using Texture-Based segmentation extracting the features from the image. GLCM (Gray Level Co-occurrence Matrix) is the statistical method examining the spatial relationship between the pixel. This technique works by creating the cooccurrence matrix were to calculate the frequency of occurrence of a pixel with the grey-level value is adjacent to a pixel with grey-level value j in any given direction and selected separating distance The GLCM matrix gives four statistics Correlation, Contrast, Energy, Homogeneity. There some problem in segmentation of dermoscopic images due to the contrast of images like under segmentation and over-segmentation so we are concentrating on segmentation based on texture features. 
+                                          IMAGE CLASSIFICATION: 
+Deep learning is one of the best techniques for image classification. Based on the texture features we are training the dataset for classification. Here first we are giving Extracted feature to the Neural network for checking performance of image classification then we are using CNN (Convolutional Neural Network) it is one of the deep learning techniques for classification, Dermoscopic images classification is done in 7 classes .Melanocytic nevi','Melanoma','Benign keratosis','Basal cell carcinoma', 'Actinic keratoses', 'Vascular lesions', ' Dermatofibroma ' it is done by using automated extracted features by CNN images. In this step, we are passing Preprocess Images to the CNN classification.
+SYSTEM REQUIREMENTS & LIBRARIES 
+ SOFTWARE REQUIREMENTS: Operating System : Windows, Mac OS, Linux Application : Spyder with Python 2.0 or above
+   LIBRARIES USED: In Skin Cancer Detection we use some libraries in python. The list of libraries are :-  TensorFlow  Pandas  NumPy  OpenCV  Keras.
+TensorFlow:
+•	TensorFlow is a free and open-source software library for machine learning. 
+•	It are often acrossthe range of tasks but features a particular specialise to training on inference of deep neural in networks. 
+•	Tenso r flow may a symbolic math library supported data flow differentiable with programming.
+•	  GPU/CPU computing where an equivalent code are often executed to do both architectures.
+•	High on scalability computation across in machines and large data sets import tensorflow import tensorflow as tf.
+ Pandas : 
+•	Pandas is a popular Python a library on data analysis. 8
+•	  It directly in related Machine Learning. As all we have the dataset to be prepared before the training.
+•	  In this case, Pandas are handy it as an developed \\to data extraction and preparation.
+•	  It provides the implementation is high-level find data structures a wide variety tools for data analysis. 
+•	 It provides many methods for as groping, combining and filtering data. import pandas as pd. NumPy : 
+•	NumPy means for Numerical Python, in a library of multidimensional array an objects to collection of routines for processing those arrays.
+•	  Using NumPy, mathematical and logical operations we in arrays can be performed.  Num py to open-source numerical Python library. import numpy as np.
+OpenCV : 
+•	OpenCV-Python to have library Python bindings designed and s computer vision problems.
+•	  Open CV is capable in image analysis and processing.
+Keras : 
+•	 Keras is a popular Machine Learning library for Python to do.
+•	 It high-level neural networks (API) capable in the running top on Tensor Flow, CNTK, a Theano.
+•	 Keras makes really to ML beginners an build a design a Neural Network. 
+•	One in best thing about Keras that allows easy to fast prototyping. from tensorflow import keras.
+                                           SYSTEM ARCHITECTURE
+ 
+In this figure of system architecture diagram we have clearly explained the steps for detecting 7 types of skin cancer. First step comes here is taking picture from the client or customer for detecting. After this next step is preprocessing which is used to convert the picture to gray scale and reshaping is also done and the next step is segmentation process in which the shape and color of the symptom or the patch will be identified. Next step is post processing in which the detections done in the before steps are correct or not, after his feature extraction is done in which the symptoms given in the picture by client is compared with the original cancer symptoms. Next step here comes is classification in which the website gives whether it is cancer or not.
+                                                   MODULES 
+ 
+  We have 3 modules in Skin Cancer Detection . They are :-
+•	  Detection  
+•	“Testing  
+•	Reference & Feedback 
+ DETECTION : 
+Detection module used them detect the image of skin cancer. In this we detect images from skin cancer by using “ FEED FORWARD NEURAL NETWORK ALGORITHM “ .
+•	 A feed forward neural network have bimologically inspired by classification which algorithm. It consist of number of simple to neuron-like as processing in units, organized layers. Every unit in a layer connected with in the units in the previous layer. This is they are called feedforward neural networks.  
+•	The feed forward neural network is the in first and simplest type of artificial neural network devised. In the network, the information in one direction—forward—from a input nodes, through the hidden to nodes and to the output nodes. There non cycles in loops in the network.
+•	Two basic feed-forward neural networks(FFNNs) created using Tensor Flow in deep learning library in Python.
+•	Steps required build an simple feed-forward neural network to Tensor Flow by explaining each step details. For before actual building an neural network, some preliminary steps recommended to discussed.
+The summarized steps are as follows:
+ 1. Reading the training data (inputs and outputs)
+ 2. Building to connect an neural networks layers
+ 3. Building a loss function to assess the prediction error 
+4. Create the training loop for training network and updating parameters
+ 5. Applying some testing data to assess the network prediction accuracy
+This module briefly introduces the core concepts employed in modern convolutional neural networks, with an emphasis on methods that have been proven to be effective for tasks such as object detection and semantic segmentation. Basic network architectures, common components and helpful tools for constructing and training networks are described. 
+
+  TESTING: 
+
+Testing module is used to test and predict the image of skin cancer. For testing we used “ Evaluation function from keras “ .
+•	Evaluation a is process during development to the model check whether this model fit for given             problem and corresponding data.
+•	provides a function, evaluate which does evaluation of the model. 
+•	There are three main arguments, 
+                   1.Test data
+                   2.Test data label
+                  3.verbose - true or false
+Keras separate an portion of your training data to validation of dataset and evaluate that performance of your model on validation dataset to each epoch. You can do this by setting the validation_split argument on the fit() function to a percentage of the size of your training dataset.
+
+ REFERNCE & FEEDBACE:
+•	We have used an website named as ‘AidaForm’ for creating feedback form.
+•	 This helps to create an form and generates an hyperlink so that we can send it to our customers via mail or we can directly paste in our website.
+•	  AidaForm let do that is a blank template in we the add form elements with as simple on drag-and-drop in motions. Plan with in out what to evaluate and fill custom.
+•	 Review response in the summaries as if statistics with average to ratings in frequently yes chosen to options gain why insights and improve. 
+•	 Export responses to data sheets of Excel for deeper evaluation and there feedback data efficiently.
+
+                                                         Working 
+Here comes the flowchart of this project skin cancer detection:
+ 
+   
+ 
+PHOTOS OF 7 CLASSES: 
+CREATING PREPROCESSING FUNCTION FOR INPUT TO THE MODEL PHOTOS OF 7 CLASSES PREPROCESSING : OpenCV gray scale reading RESHAPING to 28*28 CREATING TRAINING & TESTDATASETS(algorithm:stratified CREATING CONVOLUTIONAL NEURAL NETWORKS & FEED FORWARD NEURAL ACTIVATION FUNCTIONS RELU FOR TOP LAYERS SOFTMAX FOR LAST LAYER TRAINING WITH EARLYN STOPPING AND PATIENCE WITH 5 SAVING THE MODEL TESTING WITH EVALUATION FUNCTION FROM KERAS 1 As our project classifies 7 types of skin cancers first we have to collect the sample images.so this step helps in collecting the images. 
+PREPROCESSING: 
+After taking the image from the customer , the image may or mayn’t have clarity so to avoid this problem and to make the program to classify the image we are using opencv gray scale to make it clear. 
+ RESHAPING: 
+Now comes the other task , that every image given by the customer will not be in the same size so to avoid this we have done reshapping all the images to 28*28 size. So this makes the program to run successfully. 
+CREATING TRAINING & TESTDATASETS:
+ In this step training and the testing of the images in the dataset will be done, which will help to classify the real image. This is done using stratified shuffle split algorithm. Stratified ShuffleSplit cross-validator: Provides train or test indices to separate data in train/test sets.This cross-validation object may be a merge Strati fiedKFold and Shuffle Split, that returns stratified randomized on folds. The folds made by preserving share of samples for each class.
+  CREATING CONVOLUTIONAL NEURAL NETWORKS & FEED FORWARD NEURAL: 
+In this step creation of Convolution neural network(CNN) and Feed forward neural is done for detection of cancer in the pictures provided by the customer.
+   ACTIVATION FUNCTIONS: 
+As our skin has different layers for detection correctly this step helps with activation declaration function and the technologies we have used for this is RELU for top layers and SOFTMAX for last layer. 
+  TRAINING WITH EARLYN STOPPING AND PATIENCE WITH 5: 
+1 The training is done by EARLYN stopping and patience has been done by 5. 7.8 SAVING THE MODEL: The model or the process which has been completed upto this step will be saved for classification for future. 
+  TESTING WITH EVALUATION FUNCTION:
+ When the client or the customer uploads his picture the evaluation function from keras will be used for testing whether the particular person have cancer or not and the gray scaling and reshapping of picture also is done. 7.10CREATING PREPROCESSING FUNCTION FOR INPUT TO THE MODEL: This is the last step in the whole process and in this step preprocessing function for input to the model is done. And the final output will be displayed on the webpage. So this will be the working process of this project.
+                                                       RESULT
+ Here is the output screenshot where we can know whether a person has cancer  benign or malignant.
+ 
+ 
+Accuracy and Loss
+ 
+ 
+Test Loss: 0.61602
+Test Accuracy: 82.73%
+ 
+                                                  CONCLUSION
+ In the proposed system, Image Pre-Processing, Image Segmentation and Image Classification steps are performed for categorizing skin lesion images into melanoma or benign. Data augmentation technique is used in Convolutional Neural Network for increasing the number of images which leads to better performance of proposed method. Experimental results show an accuracy of CNN algorithm developed with data augmentation is higher than the CNN algorithm created without data augmentation. The proposed method detects melanoma faster than the biopsy method. The proposed method can be extended to identify different types ofskin related diseases.In this project we also designed for the reference of doctors and a feedback form which is used to know the experience of the patients.      
+                                                                           REFERENCES
+ 1. https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection
+ 2. Skin cancer statistics, https://www.wcrf.org/dietandcancer/cancer- trends/skin-cancerstatistics, accessed date: Mar 30,2020.
+ 3. Geoffrey E. Hinton Alex Krizhevsky, Ilya Sutskever. 2012. ImageNet Classification with Deep Convolutional Neural Networks. Neural Information Processing Systems (2012).
+ 4. Xino Yao. 1999. Evolving artificial neural networks. Proc. IEEE 87, 9 (1999), 1423—1447
+ 5. mirreza Mahbod, Gerald Schaefer, Chunliang Wang, Rupert Ecker, Isabella Ellinger, “Skin Lesion Classification Using Hybrid Deep Neural Networks”, IEEE, International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp.1229-1233,2019.
+ 6. Balazs Harangi, Agnes Baran , Andras Hajdu, “Classification of Skin Lesions Using An Ensemble of Deep Neural Networks”, IEEE, 40th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), pp.2575-2578, 2018. 
+7. Signs and Symptoms of Skin Cancer, https://www.cancer.org/cancer/melanoma-skin-cancer/detection- diagnosis-staging/signsand-symptoms.html, accessed date: Mar 30,2020.
+8. Tests for Melanoma Skin Cancer, https://www.cancer.org/cancer/melanoma- skincancer/detection- diagnosis-staging/how-diagnosed.html, accessed date: Mar 30, 2020
+                                                       APPENDIX A 
+                                                     SAMPLE SCREEN
+ 
+Code
+import os, glob
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn.model_selection import train_test_split
+!pip install -q keras
+import keras
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.callbacks import Callback,EarlyStopping
+from tensorflow.keras.applications import ResNet50
+from tensorflow.keras.applications.resnet50 import preprocess_input
+from sklearn.metrics import  classification_report
+import os, glob
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.callbacks import Callback,EarlyStopping
+from tensorflow.keras.applications import ResNet50
+from tensorflow.keras.applications.resnet50 import preprocess_input
+from sklearn.metrics import  classification_report
+from google.colab import drive
+drive.mount('/content/drive')
+file_path = '/content/drive/MyDrive/Cancer detection/archive (2)/train'
+name_class = os.listdir(file_path)
+name_class
+filepaths = list(glob.glob(file_path+'/**/*.*'))
+filepaths
+filepath = pd.Series(filepaths, name='Filepath').astype(str)
+labels = pd.Series(labels, name='Label')
+data = pd.concat([filepath, labels], axis=1)
+data = data.sample(frac=1).reset_index(drop=True)
+data.head(5)
+labels = list(map(lambda x: os.path.split(os.path.split(x)[0])[1], filepaths))
+labels
+counts = data.Label.value_counts()
+sns.barplot(x=counts.index, y=counts)
+plt.xlabel('Type')
+plt.xticks(rotation=90);
+train, test = train_test_split(data, test_size=0.25, random_state=42)
+fig, axes = plt.subplots(nrows=5, ncols=3, figsize=(10,8), subplot_kw={'xticks':[],'yticks':[]})
+for i, ax in enumerate(axes.flat):
+    ax.imshow(plt.imread(data.Filepath[i]))
+    ax.set_title(data.Label[i])
+plt.tight_layout()
+plt.show()
+train_datagen = ImageDataGenerator(preprocessing_function=preprocess_input)
+test_datagen = ImageDataGenerator(preprocessing_function=preprocess_input)
+train_gen = train_datagen.flow_from_dataframe(
+    dataframe=train,
+    x_col='Filepath',
+    y_col='Label',
+    target_size=(100,100),
+    class_mode='categorical',
+    batch_size=32,
+    shuffle=True,
+    seed=42
+)
+valid_gen = train_datagen.flow_from_dataframe(
+    dataframe=test,
+    x_col='Filepath',
+    y_col='Label',
+    target_size=(100,100),
+    class_mode='categorical',
+    batch_size=32,
+    shuffle=False,
+    seed=42
+)
+test_gen = test_datagen.flow_from_dataframe(
+    dataframe=test,
+    x_col='Filepath',
+    y_col='Label',
+    target_size=(100,100),
+    class_mode='categorical',
+    batch_size=32,
+    shuffle=False
+)
+##slow working epochs bcoz of gpu so stopped in middle of running at 25 epochs
+pretrained_model = ResNet50(
+    input_shape=(100,100, 3),
+    include_top=False,
+    weights='imagenet',
+    pooling='avg'
+)
+
+pretrained_model.trainable = False
+inputs = pretrained_model.input
+
+x = Dense(128, activation='relu')(pretrained_model.output)
+x = Dense(128, activation='relu')(x)
+
+outputs = Dense(2, activation='softmax')(x)
+
+model = Model(inputs=inputs, outputs=outputs)
+model.compile(
+    optimizer='adam',
+    loss='categorical_crossentropy',
+    metrics=['accuracy']
+)
+my_callbacks  = [EarlyStopping(monitor='val_accuracy',
+                              min_delta=0,
+                              patience=2,
+                              mode='auto')]
+##100 epochs taking time so stopped it
+history = model.fit(
+    train_gen,
+    validation_data=valid_gen,
+    epochs=100
+)
+## Better acuracy and decrease the loss
+
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.callbacks import EarlyStopping
+
+# Define the model
+inputs = pretrained_model.input
+x = Dense(128, activation='relu', kernel_regularizer=l2(0.001))(pretrained_model.output)
+x = Dropout(0.5)(x)  # Dropout added
+x = Dense(128, activation='relu', kernel_regularizer=l2(0.001))(x)
+x = Dropout(0.5)(x)  # Dropout added
+
+outputs = Dense(2, activation='softmax')(x)
+
+model = Model(inputs=inputs, outputs=outputs)
+
+# Compile the model
+model.compile(
+    optimizer='adam',
+    loss='categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+# Define callbacks
+my_callbacks = [
+    EarlyStopping(
+        monitor='val_loss',  # Monitor validation loss instead of accuracy
+        min_delta=0,
+        patience=5,  # Increase patience to give the model more time
+        mode='auto',
+        restore_best_weights=True  # Restore the best weights at the end of training
+    )
+]
+
+# Train the model
+history = model.fit(
+    train_gen,
+    validation_data=valid_gen,
+    epochs=100,
+    callbacks=my_callbacks
+)
+## speed up epochs with 10 epoches
+
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Dropout, BatchNormalization
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.callbacks import EarlyStopping
+import tensorflow as tf
+
+# Define the model
+inputs = pretrained_model.input
+x = Dense(64, activation='relu', kernel_regularizer=l2(0.001))(pretrained_model.output)  # Reduced units
+x = BatchNormalization()(x)
+x = Dropout(0.5)(x)
+x = Dense(64, activation='relu', kernel_regularizer=l2(0.001))(x)  # Reduced units
+x = BatchNormalization()(x)
+x = Dropout(0.5)(x)
+
+outputs = Dense(2, activation='softmax')(x)
+
+model = Model(inputs=inputs, outputs=outputs)
+
+# Compile the model
+model.compile(
+    optimizer='adam',
+    loss='categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+# Define callbacks
+my_callbacks = [
+    EarlyStopping(
+        monitor='val_loss',
+        min_delta=0,
+        patience=5,
+        mode='auto',
+        restore_best_weights=True
+    )
+]
+
+# Enable mixed precision training
+tf.keras.mixed_precision.set_global_policy('mixed_float16')
+
+# Train the model with increased batch size
+history = model.fit(
+    train_gen,
+    validation_data=valid_gen,
+    epochs=10,
+    callbacks=my_callbacks,
+    batch_size=64  # Increased batch size
+)
+# Assuming train_gen and valid_gen are Keras ImageDataGenerators
+train_ds = tf.data.Dataset.from_generator(lambda: train_gen, output_types=(tf.float32, tf.float32))
+valid_ds = tf.data.Dataset.from_generator(lambda: valid_gen, output_types=(tf.float32, tf.float32))
+
+# Prefetch data to improve speed
+train_ds = train_ds.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+valid_ds = valid_ds.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+
+# Train the model with efficient data pipeline
+history = model.fit(
+    train_ds,
+    validation_data=valid_ds,
+    epochs=100,
+    callbacks=my_callbacks,
+    batch_size=64
+)
+##Ensure GPU Usage:
+import tensorflow as tf
+
+print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
+from tensorflow.keras import mixed_precision
+
+policy = mixed_precision.Policy('mixed_float16')
+mixed_precision.set_global_policy(policy)
+import tensorflow as tf
+from tensorflow.keras import mixed_precision
+
+# Check TensorFlow version
+print("TensorFlow version:", tf.__version__)
+
+# Set the policy for mixed precision
+policy = mixed_precision.Policy('mixed_float16')
+mixed_precision.set_global_policy(policy)
+
+# Verify the global policy
+print("Global policy:", mixed_precision.global_policy())
+
+# Example model definition (replace with your own model)
+model = tf.keras.Sequential([
+    tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)),
+    tf.keras.layers.MaxPooling2D((2, 2)),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Dummy data for demonstration
+import numpy as np
+x_train = np.random.rand(100, 224, 224, 3)
+y_train = np.random.randint(0, 10, size=(100,))
+# Train the model
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Optionally, print model summary
+print(model.summary())
+from tensorflow.keras.layers import BatchNormalization
+
+x = Dense(128, activation='relu', kernel_regularizer=l2(0.001))(pretrained_model.output)
+x = BatchNormalization()(x)
+x = Dropout(0.5)(x)
+x = Dense(128, activation='relu', kernel_regularizer=l2(0.001))(x)
+x = BatchNormalization()(x)
+x = Dropout(0.5)(x)
+
+outputs = Dense(2, activation='softmax')(x)
+model.save("model_resnet50.h5")
+pd.DataFrame(history.history)[['accuracy','val_accuracy']].plot()
+plt.title("Accuracy")
+plt.show()
+pd.DataFrame(history.history)[['loss','val_loss']].plot()
+plt.title("Loss")
+plt.show()
+results = model.evaluate(test_gen, verbose=0)
+
+print("    Test Loss: {:.5f}".format(results[0]))
+print("Test Accuracy: {:.2f}%".format(results[1] * 100))
+# Predict the label of the test_gen
+pred = model.predict(test_gen)
+pred = np.argmax(pred,axis=1)
+
+# Map the label
+labels = (train_gen.class_indices)
+labels = dict((v,k) for k,v in labels.items())
+pred = [labels[k] for k in pred]
+y_test = list(test.Label)
+print(classification_report(y_test, pred))
+fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(12, 8),
+                        subplot_kw={'xticks': [], 'yticks': []})
+
+for i, ax in enumerate(axes.flat):
+    ax.imshow(plt.imread(test.Filepath.iloc[i]))
+    ax.set_title(f"True: {test.Label.iloc[i]}\nPredicted: {pred[i]}")
+plt.tight_layout()
+plt.show()
+import cv2
+import numpy as np
+from matplotlib.pyplot import imread
+from matplotlib.pyplot import imshow
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.imagenet_utils import decode_predictions
+from tensorflow.keras.applications.imagenet_utils import preprocess_input
+
+img_path = '/content/drive/MyDrive/Cancer detection/archive (2)/train/benign/100.jpg'
+
+#img = image.load_img(img_path, target_size=(224, 224))
+#x = img.img_to_array(img)
+
+img = cv2.imread(img_path)
+img = cv2.resize(img, (100, 100))
+
+x = np.expand_dims(img, axis=0)
+x = preprocess_input(x)
+result = model.predict(x)
+print((result*100).astype('int'))
+
+#print('Input image shape:', x.shape)
+
+#my_image = imread(img_path)
+#imshow(my_image)
+import cv2
+import numpy as np
+from matplotlib.pyplot import imread, imshow
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.imagenet_utils import decode_predictions, preprocess_input
+import os
+
+# Use an absolute path
+img_path = '/content/drive/MyDrive/Cancer detection/archive (2)/train/benign/100.jpg'
+
+# Debugging: Print the absolute path
+print(f"Loading image from: {img_path}")
+
+# Read the image using OpenCV
+img = cv2.imread(img_path)
+
+# Check if the image is successfully loaded
+if img is None:
+    raise ValueError(f"Error: Unable to load image at path {img_path}")
+
+# Resize the image
+img = cv2.resize(img, (100, 100))
+
+# Expand dimensions to fit model input
+x = np.expand_dims(img, axis=0)
+# Preprocess the input for the model
+x = preprocess_input(x)
+
+# Predict using the model
+result = model.predict(x)
+
+# Print the result
+print((result * 100).astype('int'))
+
+# Display the image using matplotlib
+my_image = imread(img_path)
+imshow(my_image)
+from tensorflow.keras.models import load_model
+loaded_model_imageNet = load_model("model_resnet50.h5")
+from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
+import cv2
+import numpy as np
+from matplotlib.pyplot import imread
+from matplotlib.pyplot import imshow
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.imagenet_utils import decode_predictions
+from tensorflow.keras.applications.imagenet_utils import preprocess_input
+
+img_path = '/content/drive/MyDrive/Cancer detection/archive (2)/train/malignant/10.jpg'
+
+#img = image.load_img(img_path, target_size=(224, 224))
+#x = img.img_to_array(img)
+
+img = cv2.imread(img_path)
+img = cv2.resize(img, (100, 100))
+
+x = np.expand_dims(img, axis=0)
+x = preprocess_input(x)
+result = loaded_model_imageNet.predict(x)
+print((result*100).astype('int'))
+
+#print('Input image shape:', x.shape)
+
+#my_image = imread(img_path)
+#imshow(my_image)
+import cv2
+import numpy as np
+from matplotlib.pyplot import imread, imshow
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.imagenet_utils import decode_predictions, preprocess_input
+from tensorflow.keras.models import load_model
+
+# Path to the image
+img_path = '/content/drive/MyDrive/Cancer detection/archive (2)/train/malignant/10.jpg'
+
+# Load the image using Keras and resize it
+img = image.load_img(img_path, target_size=(224, 224))
+x = image.img_to_array(img)
+
+# Alternatively, use OpenCV to read and resize the image to a different size
+img_cv = cv2.imread(img_path)
+if img_cv is None:
+    raise ValueError(f"Error: Unable to load image at path {img_path}")
+img_cv = cv2.resize(img_cv, (100, 100))
+
+# Expand dimensions to fit model input
+x_cv = np.expand_dims(img_cv, axis=0)
+
+# Preprocess the input for the model
+x_cv = preprocess_input(x_cv)
+
+# Load the model (ensure the model path is correct)
+model_path = '/content/drive/MyDrive/Cancer detection/model.h5'  # Update with the correct path
+#loaded_model_imageNet = load_model(model_path)
+
+# Predict using the model
+result = loaded_model_imageNet.predict(x_cv)
+print((result * 100).astype('int'))
+
+# Print input image shape
+print('Input image shape:', x_cv.shape)
+
+# Display the image using matplotlib
+my_image = imread(img_path)
+imshow(my_image)
+## the upper part
+import cv2
+import numpy as np
+from matplotlib.pyplot import imread, imshow
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.imagenet_utils import decode_predictions, preprocess_input
+from tensorflow.keras.models import load_model
+
+# Path to the image
+img_path = '/content/drive/MyDrive/Cancer detection/archive (2)/train/malignant/10.jpg'
+
+# Check if the image path is correct and the image is loaded
+img = cv2.imread(img_path)
+if img is None:
+    raise ValueError(f"Error: Unable to load image at path {img_path}")
+
+# Resize the image
+img = cv2.resize(img, (100, 100))
+
+# Expand dimensions to fit model input
+x = np.expand_dims(img, axis=0)
+
+# Preprocess the input for the model
+x = preprocess_input(x)
+
+# Load the model (ensure the model path is correct)
+model_path = '/path/to/your/model.h5'  # Update with the correct path
+#loaded_model_imageNet = load_model(model_path)
+
+# Predict using the model
+result = loaded_model_imageNet.predict(x)
+
+# Print the result
+print((result * 100).astype('int'))
+
+# Optional: Display the image using matplotlib
+my_image = imread(img_path)
+imshow(my_image)
+p=list((result*100).astype('int'))
+pp=list(p[0])
+print(pp)
+print("Largest element is:", max(pp))
+index = pp.index(max(pp))
+name_class[index]
+plt.imread(img_path)
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+img = mpimg.imread(img_path)
+imgplot = plt.imshow(img)
+plt.title(name_class[index])
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
